@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <title>🪙 Coin Toss</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            color: hwb(0 100% 0%);
+            text-shadow: 0 0 5px #2FD5F3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #000;
+            border: 1px solid #2FD5F3;
+            box-shadow: 0 0 20px #2FD5F3;
+        }
+
+        .gif-container {
+            margin-bottom: 20px;
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 10px #2FD5F3;
+        }
+
+        .gif-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            background-color: #2FD5F3;
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 0 8px #2FD5F3;
+        }
+
+        button:hover {
+            background-color: #2FD5F3;
+            transform: scale(1.06);
+        }
+
+        button:active {
+            transform: scale(0.94);
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #result {
+            color: #EDED3D;
+            text-shadow: 0 0 8px #EDED3D;
+        }
+
+        .counter {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #b6a6a6;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="gif-container">
+            <img id="coin-image"
+                 src="https://media.giphy.com/media/PcRAqwf1vpHDD9JjNy/giphy.gif?cid=ecf05e470f2heaouonweuxmc1ctwg88uut6jcvoz8f9vg91h&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                 alt="bbbbb"
+                 style="width: 100%; height: auto;">
+        </div>
+
+        <button id="click">ACTIVATE FLIP</button>
+        <p>
+            You got: <span id="result"></span>
+        </p>
+
+        <div class="counter">
+            ⭐ Flips: <span id="flipCount">0</span>
+            <br>
+            🎉 Heads: <span id="headsCount">0</span>
+            <br>
+            😬 Tails: <span id="tailsCount">0</span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
